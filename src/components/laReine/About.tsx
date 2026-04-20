@@ -1,25 +1,59 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import about from "@/assets/about.jpg";
 
 const About = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const imageY = useTransform(scrollYProgress, [0, 1], [80, -80]);
+  const textY = useTransform(scrollYProgress, [0, 1], [40, -40]);
+
   return (
-    <section id="despre" className="relative bg-ivory py-32 md:py-48">
+    <section
+      ref={sectionRef}
+      id="despre"
+      className="relative bg-ivory py-32 md:py-48 overflow-hidden"
+    >
       <div className="container grid grid-cols-12 gap-6 md:gap-12">
         {/* Eyebrow */}
-        <div className="col-span-12 md:col-span-3">
+        <motion.div
+          className="col-span-12 md:col-span-3"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        >
           <p className="editorial-eyebrow text-noir/60">— 01 / Despre</p>
-        </div>
+        </motion.div>
 
         {/* Headline */}
-        <div className="col-span-12 md:col-span-9">
+        <motion.div
+          className="col-span-12 md:col-span-9"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+        >
           <h2 className="font-display text-4xl md:text-7xl leading-[1] text-noir tracking-tight">
             Rochia de mireasă <br />
             nu este o alegere. <br />
             <span className="italic text-gold">Este o declarație.</span>
           </h2>
-        </div>
+        </motion.div>
 
-        {/* Image — offset */}
-        <div className="col-span-12 md:col-span-5 md:col-start-2 mt-16 md:mt-24">
+        {/* Image — offset with parallax */}
+        <motion.div
+          className="col-span-12 md:col-span-5 md:col-start-2 mt-16 md:mt-24"
+          style={{ y: imageY }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+        >
           <div className="hover-zoom overflow-hidden">
             <img
               src={about}
@@ -31,10 +65,17 @@ const About = () => {
           <p className="editorial-eyebrow text-noir/60 mt-4">
             Atelier · Bucharest
           </p>
-        </div>
+        </motion.div>
 
-        {/* Text — overlapping right */}
-        <div className="col-span-12 md:col-span-5 md:col-start-8 mt-8 md:mt-48 space-y-6">
+        {/* Text — overlapping right with parallax */}
+        <motion.div
+          className="col-span-12 md:col-span-5 md:col-start-8 mt-8 md:mt-48 space-y-6"
+          style={{ y: textY }}
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        >
           <div className="gold-line w-24" />
           <p className="font-display text-2xl md:text-3xl italic text-noir/90 leading-snug">
             Selectăm fiecare piesă cu o atenție obsesivă pentru formă, textură și prezență.
@@ -47,7 +88,7 @@ const About = () => {
             — Nu este despre rochie. <br />
             <span className="pl-12">Este despre cum te simți în ea.</span>
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
