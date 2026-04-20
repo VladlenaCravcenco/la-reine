@@ -17,7 +17,7 @@ const Index = () => {
       <Nav />
       <Hero />
       <About />
-      <Marquee />
+      
       <Collection onSelectForFitting={setPreselectedDress} />
       <Experience />
       <Booking preselectedId={preselectedDress} />
