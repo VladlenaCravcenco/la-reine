@@ -8,11 +8,11 @@ const Footer = () => {
               LA <br />
               <span className="italic text-gold">Reine</span>
             </h2>
-            <p className="editorial-eyebrow text-ivory/60 mt-8">Bridal Salon · Bucharest</p>
+            <p className="font-display italic text-ivory/60 mt-8 text-lg">Bridal Salon · Bucharest</p>
           </div>
 
           <div className="col-span-6 md:col-span-3 md:col-start-8 mt-12 md:mt-0">
-            <p className="editorial-eyebrow text-gold mb-4">Contact</p>
+            <p className="font-display italic text-gold mb-4 text-lg">Contact</p>
             <a
               href="tel:+40749170150"
               className="font-display text-2xl md:text-3xl text-ivory hover:text-gold transition-colors block"
@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
 
           <div className="col-span-6 md:col-span-3 mt-12 md:mt-0">
-            <p className="editorial-eyebrow text-gold mb-4">Atelier</p>
+            <p className="font-display italic text-gold mb-4 text-lg">Atelier</p>
             <p className="font-display text-lg md:text-xl text-ivory leading-snug">
               șos. N. Titulescu <br />
               51–59 <br />
@@ -40,7 +40,7 @@ const Footer = () => {
         <div className="gold-line w-full mt-24 mb-8" />
 
         <div className="flex flex-col md:flex-row justify-between gap-4">
-          <p className="editorial-eyebrow text-ivory/50">
+          <p className="font-display italic text-ivory/50 text-sm">
             © {new Date().getFullYear()} LA REINE — Toate drepturile rezervate
           </p>
           <p className="font-display italic text-ivory/60 text-sm">
