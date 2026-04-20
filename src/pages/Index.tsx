@@ -1,16 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import Nav from "@/components/laReine/Nav";
+import Hero from "@/components/laReine/Hero";
+import About from "@/components/laReine/About";
+import Marquee from "@/components/laReine/Marquee";
+import Collection from "@/components/laReine/Collection";
+import Experience from "@/components/laReine/Experience";
+import Booking from "@/components/laReine/Booking";
+import Inspiration from "@/components/laReine/Inspiration";
+import Footer from "@/components/laReine/Footer";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const [preselectedDress, setPreselectedDress] = useState<string | null>(null);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main className="bg-ivory text-noir">
+      <Nav />
+      <Hero />
+      <About />
+      <Marquee />
+      <Collection onSelectForFitting={setPreselectedDress} />
+      <Experience />
+      <Booking preselectedId={preselectedDress} />
+      <Inspiration />
+      <Footer />
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
