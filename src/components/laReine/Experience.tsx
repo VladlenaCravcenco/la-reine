@@ -20,16 +20,11 @@ const Experience = () => {
   return (
     <section id="experienta" className="bg-noir text-ivory py-32 md:py-48">
       <div className="container">
-        <div className="grid grid-cols-12 gap-4 mb-20">
-          <div className="col-span-12 md:col-span-3">
-            <p className="editorial-eyebrow text-ivory/60">— 03 / Experiență</p>
-          </div>
-          <div className="col-span-12 md:col-span-9">
-            <h2 className="font-display text-5xl md:text-8xl text-ivory leading-[0.95]">
-              O <span className="italic text-gold">experiență</span> <br />
-              ca o ceremonie.
-            </h2>
-          </div>
+        <div className="mb-20 max-w-4xl">
+          <h2 className="font-display text-5xl md:text-8xl text-ivory leading-[0.95]">
+            O <span className="italic text-gold">experiență</span> <br />
+            ca o ceremonie.
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-12 md:gap-16">

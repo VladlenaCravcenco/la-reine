@@ -19,20 +19,9 @@ const About = () => {
       className="relative bg-ivory py-32 md:py-48 overflow-hidden"
     >
       <div className="container grid grid-cols-12 gap-6 md:gap-12">
-        {/* Eyebrow */}
-        <motion.div
-          className="col-span-12 md:col-span-3"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <p className="editorial-eyebrow text-noir/60">— 01 / Despre</p>
-        </motion.div>
-
         {/* Headline */}
         <motion.div
-          className="col-span-12 md:col-span-9"
+          className="col-span-12"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -62,9 +51,6 @@ const About = () => {
               className="w-full h-[60vh] object-cover"
             />
           </div>
-          <p className="editorial-eyebrow text-noir/60 mt-4">
-            Atelier · Bucharest
-          </p>
         </motion.div>
 
         {/* Text — overlapping right with parallax */}

@@ -46,8 +46,7 @@ const Booking = ({ preselectedId }: { preselectedId: string | null }) => {
     <section id="programare" className="bg-ivory-deep py-32 md:py-48">
       <div className="container grid grid-cols-12 gap-6 md:gap-12">
         <div className="col-span-12 md:col-span-4">
-          <p className="editorial-eyebrow text-noir/60">— 04 / Programare</p>
-          <h2 className="font-display text-5xl md:text-7xl text-noir leading-[0.95] mt-6">
+          <h2 className="font-display text-5xl md:text-7xl text-noir leading-[0.95]">
             Programează <br />
             <span className="italic text-gold">o probă.</span>
           </h2>
@@ -71,7 +70,7 @@ const Booking = ({ preselectedId }: { preselectedId: string | null }) => {
                   0{i + 1}
                 </span>
                 <span
-                  className={`editorial-eyebrow transition-colors ${
+                  className={`font-display italic text-lg transition-colors ${
                     step === i ? "text-noir" : "text-noir/40"
                   }`}
                 >
@@ -92,7 +91,7 @@ const Booking = ({ preselectedId }: { preselectedId: string | null }) => {
             {/* STEP 1 — Dress */}
             {step === 0 && (
               <div className="animate-fade-in">
-                <p className="editorial-eyebrow text-noir/60 mb-8">Pasul 01 — Selectează rochia</p>
+                <p className="font-display italic text-noir/60 mb-8 text-lg">Selectează rochia</p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {dresses.map((d) => (
                     <button
@@ -110,7 +109,6 @@ const Booking = ({ preselectedId }: { preselectedId: string | null }) => {
                       </div>
                       <div className="p-2">
                         <p className="font-display italic text-lg text-noir">{d.name}</p>
-                        <p className="editorial-eyebrow text-noir/50">{d.number}</p>
                       </div>
                     </button>
                   ))}
@@ -120,7 +118,7 @@ const Booking = ({ preselectedId }: { preselectedId: string | null }) => {
                     type="button"
                     disabled={!dressId}
                     onClick={() => setStep(1)}
-                    className="editorial-eyebrow border border-noir px-8 py-4 hover:bg-noir hover:text-ivory transition-colors disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-noir"
+                    className="btn-primary disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-noir disabled:hover:text-ivory"
                   >
                     Continuă →
                   </button>
@@ -131,18 +129,18 @@ const Booking = ({ preselectedId }: { preselectedId: string | null }) => {
             {/* STEP 2 — Date */}
             {step === 1 && (
               <div className="animate-fade-in flex flex-col h-full">
-                <p className="editorial-eyebrow text-noir/60 mb-8">Pasul 02 — Alege data</p>
+                <p className="font-display italic text-noir/60 mb-8 text-lg">Alege data</p>
                 {selectedDress && (
                   <div className="mb-8 p-4 bg-ivory-deep flex items-center gap-4">
                     <img src={selectedDress.image} alt="" className="w-16 h-20 object-cover" />
                     <div>
-                      <p className="editorial-eyebrow text-noir/50">Rochie selectată</p>
+                      <p className="font-display italic text-noir/50 text-sm">Rochie selectată</p>
                       <p className="font-display italic text-xl text-noir">{selectedDress.name}</p>
                     </div>
                   </div>
                 )}
                 <label className="block">
-                  <span className="editorial-eyebrow text-noir/60">Data dorită</span>
+                  <span className="font-display italic text-noir/60">Data dorită</span>
                   <input
                     type="date"
                     min={today}
@@ -151,14 +149,14 @@ const Booking = ({ preselectedId }: { preselectedId: string | null }) => {
                     className="mt-3 w-full bg-transparent border-b border-noir/30 py-3 font-display text-2xl text-noir focus:outline-none focus:border-noir"
                   />
                 </label>
-                <p className="text-noir/50 text-sm mt-3 italic">
+                <p className="text-noir/50 text-sm mt-3 italic font-display">
                   Te vom contacta pentru confirmarea intervalului orar.
                 </p>
-                <div className="mt-auto pt-8 flex justify-between">
+                <div className="mt-auto pt-8 flex justify-between items-center">
                   <button
                     type="button"
                     onClick={() => setStep(0)}
-                    className="editorial-eyebrow text-noir/60 hover:text-noir"
+                    className="font-display italic text-noir/60 hover:text-noir text-lg"
                   >
                     ← Înapoi
                   </button>
@@ -166,7 +164,7 @@ const Booking = ({ preselectedId }: { preselectedId: string | null }) => {
                     type="button"
                     disabled={!date}
                     onClick={() => setStep(2)}
-                    className="editorial-eyebrow border border-noir px-8 py-4 hover:bg-noir hover:text-ivory transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                    className="btn-primary disabled:opacity-30 disabled:cursor-not-allowed"
                   >
                     Continuă →
                   </button>
@@ -177,10 +175,10 @@ const Booking = ({ preselectedId }: { preselectedId: string | null }) => {
             {/* STEP 3 — Contact */}
             {step === 2 && (
               <div className="animate-fade-in flex flex-col h-full">
-                <p className="editorial-eyebrow text-noir/60 mb-8">Pasul 03 — Detaliile tale</p>
+                <p className="font-display italic text-noir/60 mb-8 text-lg">Detaliile tale</p>
                 <div className="space-y-6">
                   <label className="block">
-                    <span className="editorial-eyebrow text-noir/60">Nume</span>
+                    <span className="font-display italic text-noir/60">Nume</span>
                     <input
                       type="text"
                       value={name}
@@ -190,7 +188,7 @@ const Booking = ({ preselectedId }: { preselectedId: string | null }) => {
                     />
                   </label>
                   <label className="block">
-                    <span className="editorial-eyebrow text-noir/60">Telefon</span>
+                    <span className="font-display italic text-noir/60">Telefon</span>
                     <input
                       type="tel"
                       value={phone}
@@ -200,7 +198,7 @@ const Booking = ({ preselectedId }: { preselectedId: string | null }) => {
                     />
                   </label>
                   <label className="block">
-                    <span className="editorial-eyebrow text-noir/60">Mesaj (opțional)</span>
+                    <span className="font-display italic text-noir/60">Mesaj (opțional)</span>
                     <textarea
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
@@ -213,18 +211,18 @@ const Booking = ({ preselectedId }: { preselectedId: string | null }) => {
                   <button
                     type="button"
                     onClick={() => setStep(1)}
-                    className="editorial-eyebrow text-noir/60 hover:text-noir"
+                    className="font-display italic text-noir/60 hover:text-noir text-lg"
                   >
                     ← Înapoi
                   </button>
                   <button
                     type="submit"
-                    className="editorial-eyebrow bg-noir text-ivory px-10 py-4 hover:bg-gold hover:text-noir transition-colors"
+                    className="btn-primary"
                   >
                     Trimite solicitarea
                   </button>
                 </div>
-                <p className="text-noir/50 text-xs italic mt-6 text-center">
+                <p className="font-display text-noir/50 text-sm italic mt-6 text-center">
                   Te vom contacta pentru confirmarea programării și detalii suplimentare.
                 </p>
               </div>

@@ -21,24 +21,19 @@ const Collection = ({ onSelectForFitting }: { onSelectForFitting: (id: string) =
     <section id="colectie" className="bg-ivory py-32 md:py-48">
       <div className="container">
         {/* Header */}
-        <div className="grid grid-cols-12 gap-4 mb-20 md:mb-32">
-          <div className="col-span-12 md:col-span-3">
-            <p className="editorial-eyebrow text-noir/60">— 02 / Colecția</p>
-          </div>
-          <div className="col-span-12 md:col-span-9">
-            <h2 className="font-display text-5xl md:text-8xl leading-[0.95] text-noir">
-              Colecția
-            </h2>
-            <p className="font-display text-xl md:text-2xl italic text-noir/70 mt-6 max-w-xl">
-              Forme contemporane. Linii curate. Detalii care definesc prezența.
-            </p>
-          </div>
+        <div className="mb-20 md:mb-32 max-w-4xl">
+          <h2 className="font-display text-5xl md:text-8xl leading-[0.95] text-noir">
+            Colecția
+          </h2>
+          <p className="font-display text-xl md:text-2xl italic text-noir/70 mt-6 max-w-xl">
+            Forme contemporane. Linii curate. Detalii care definesc prezența.
+          </p>
         </div>
 
         {/* Filters */}
         <div id="filtru" className="grid md:grid-cols-2 gap-10 md:gap-16 mb-20 border-y border-noir/10 py-10">
           <div>
-            <p className="editorial-eyebrow text-noir/60 mb-4">Filtrează după stil</p>
+            <p className="font-display italic text-noir/50 mb-4">Stil</p>
             <div className="flex flex-wrap gap-x-6 gap-y-3">
               {styles.map((s) => (
                 <button
@@ -56,7 +51,7 @@ const Collection = ({ onSelectForFitting }: { onSelectForFitting: (id: string) =
             </div>
           </div>
           <div>
-            <p className="editorial-eyebrow text-noir/60 mb-4">Filtrează după siluetă</p>
+            <p className="font-display italic text-noir/50 mb-4">Siluetă</p>
             <div className="flex flex-wrap gap-x-6 gap-y-3">
               {silhouettes.map((s) => (
                 <button
@@ -111,12 +106,11 @@ const Collection = ({ onSelectForFitting }: { onSelectForFitting: (id: string) =
                 </div>
                 <div className="flex justify-between items-baseline mt-4">
                   <div>
-                    <p className="editorial-eyebrow text-noir/50">{d.number}</p>
-                    <h3 className="font-display text-2xl md:text-3xl italic text-noir mt-1">
+                    <h3 className="font-display text-2xl md:text-3xl italic text-noir">
                       {d.name}
                     </h3>
                   </div>
-                  <p className="editorial-eyebrow text-noir/60">{d.silhouette}</p>
+                  <p className="font-display italic text-noir/60">{d.silhouette}</p>
                 </div>
               </button>
             );

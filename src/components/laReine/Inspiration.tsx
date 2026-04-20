@@ -47,31 +47,20 @@ const Inspiration = () => {
   return (
     <section className="bg-ivory py-32 md:py-48 overflow-hidden">
       <div className="container">
-        <div className="grid grid-cols-12 gap-4 mb-20">
-          <motion.div
-            className="col-span-12 md:col-span-3"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <p className="editorial-eyebrow text-noir/60">— 05 / Galerie</p>
-          </motion.div>
-          <motion.div
-            className="col-span-12 md:col-span-9"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <h2 className="font-display text-5xl md:text-8xl text-noir leading-[0.95]">
-              <span className="italic">Inspirație.</span>
-            </h2>
-            <p className="font-display text-xl md:text-2xl italic text-noir/70 mt-6 max-w-xl">
-              Fragmente de eleganță. Detalii care spun mai mult decât cuvintele.
-            </p>
-          </motion.div>
-        </div>
+        <motion.div
+          className="mb-20 max-w-4xl"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <h2 className="font-display text-5xl md:text-8xl text-noir leading-[0.95]">
+            <span className="italic">Inspirație.</span>
+          </h2>
+          <p className="font-display text-xl md:text-2xl italic text-noir/70 mt-6 max-w-xl">
+            Fragmente de eleganță. Detalii care spun mai mult decât cuvintele.
+          </p>
+        </motion.div>
 
         <div className="grid grid-cols-12 gap-4 md:gap-6">
           <ParallaxImage
