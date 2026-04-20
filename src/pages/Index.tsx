@@ -2,7 +2,7 @@ import { useState } from "react";
 import Nav from "@/components/laReine/Nav";
 import Hero from "@/components/laReine/Hero";
 import About from "@/components/laReine/About";
-import Marquee from "@/components/laReine/Marquee";
+
 import Collection from "@/components/laReine/Collection";
 import Experience from "@/components/laReine/Experience";
 import Booking from "@/components/laReine/Booking";
