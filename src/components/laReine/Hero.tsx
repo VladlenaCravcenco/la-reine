@@ -39,21 +39,8 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-ivory/60 via-transparent to-ivory/30" />
       </motion.div>
 
-      {/* Top eyebrow */}
-      <motion.div
-        className="relative container pt-32 md:pt-40"
-        style={{ y: eyebrowY, opacity }}
-      >
-        <p
-          className="editorial-eyebrow text-noir reveal-fade"
-          style={{ animationDelay: "0.2s" }}
-        >
-          Bridal Atelier · Bucharest · Est. 2024
-        </p>
-      </motion.div>
-
       {/* Main composition */}
-      <div className="relative container mt-12 md:mt-16 grid grid-cols-12 gap-6 md:gap-8 items-end">
+      <div className="relative container pt-40 md:pt-48 grid grid-cols-12 gap-6 md:gap-8 items-end">
         <motion.div
           className="col-span-12 md:col-span-8"
           style={{ y: titleY, opacity }}
@@ -76,12 +63,10 @@ const Hero = () => {
           style={{ y: descriptorY, opacity }}
         >
           <div className="reveal-up" style={{ animationDelay: "0.9s" }}>
-            <p className="editorial-eyebrow text-noir mb-3">
-              Modern Bridal Dresses
-            </p>
-            <p className="font-display text-lg md:text-xl italic text-noir/80 leading-snug">
+            <p className="font-display text-xl md:text-2xl italic text-noir leading-snug">
               Rochii pentru femeia care nu urmează reguli — le definește.
             </p>
+            <div className="gold-line w-16 mt-6" />
           </div>
         </motion.div>
       </div>
@@ -94,17 +79,11 @@ const Hero = () => {
         <div className="reveal-fade" style={{ animationDelay: "1.2s" }}>
           <button
             onClick={() => scrollTo("programare")}
-            className="group inline-flex items-center gap-4 editorial-eyebrow text-noir border-b border-noir pb-2 hover:gap-6 transition-all duration-500"
+            className="btn-primary reveal-fade"
           >
             Programează o probă
-            <span className="inline-block w-10 h-px bg-noir transition-all group-hover:w-16" />
+            <span className="inline-block w-8 h-px bg-current" />
           </button>
-        </div>
-        <div
-          className="hidden md:block editorial-eyebrow text-noir/70 reveal-fade"
-          style={{ animationDelay: "1.4s" }}
-        >
-          Scroll ↓
         </div>
       </motion.div>
     </section>
