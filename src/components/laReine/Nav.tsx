@@ -46,7 +46,7 @@ const Nav = () => {
             <button
               key={l.id}
               onClick={() => scrollTo(l.id)}
-              className="editorial-eyebrow text-noir/80 hover:text-noir underline-grow"
+              className="font-display italic text-lg text-noir/70 hover:text-noir underline-grow"
             >
               {l.label}
             </button>
@@ -55,13 +55,13 @@ const Nav = () => {
 
         <button
           onClick={() => scrollTo("programare")}
-          className="hidden md:inline-block editorial-eyebrow border border-noir px-5 py-3 hover:bg-noir hover:text-ivory transition-colors duration-500"
+          className="hidden md:inline-flex items-center bg-noir text-ivory font-display italic text-base px-6 py-3 hover:bg-gold hover:text-noir transition-colors duration-500"
         >
           Programează
         </button>
 
         <button
-          className="md:hidden editorial-eyebrow"
+          className="md:hidden font-display italic text-lg"
           onClick={() => setOpen((o) => !o)}
           aria-label="Menu"
         >
@@ -83,7 +83,7 @@ const Nav = () => {
             ))}
             <button
               onClick={() => scrollTo("programare")}
-              className="editorial-eyebrow border border-noir px-5 py-3 mt-4 self-start"
+              className="bg-noir text-ivory font-display italic text-lg px-6 py-4 mt-4 self-start hover:bg-gold hover:text-noir transition-colors"
             >
               Programează o probă
             </button>
