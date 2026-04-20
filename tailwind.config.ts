@@ -13,12 +13,21 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ["Cormorant Garamond", "Didot", "serif"],
+        body: ["Inter", "system-ui", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        ivory: "hsl(var(--ivory))",
+        "ivory-deep": "hsl(var(--ivory-deep))",
+        noir: "hsl(var(--noir))",
+        gold: "hsl(var(--gold))",
+        "gold-soft": "hsl(var(--gold-soft))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
